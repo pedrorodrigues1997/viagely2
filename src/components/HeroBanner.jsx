@@ -8,18 +8,18 @@ function HomeBanner() {
   const [searchData, setSearchData] = useState("");
   useEffect(() => {
     const interval = setInterval(
-      () => setImage(image >= 6 ? 1 : image + 1),
+      () => setImage(image >= 9 ? 1 : image + 1),
       10000
     );
     return () => clearInterval(interval);
   }, [image]);
 
   return (
-    <div className="h-[680px] relative bg-cover">
-      <div className="absolute top-0 right-0 w-[110vw] h-full transition-opacity z-0">
+    <div className="h-[680px] flex justify-center bg-cover">
+      <div className="absolute top-0 h-[680px]  w-[1440px] transition-opacity z-0">
         <Image
           alt="hero"
-          src="/bg-hero1.webp"
+          src="/Fundo1.jpg"
           fill
           className={`${
             image === 1 ? "opacity-100" : "opacity-0"
@@ -27,7 +27,7 @@ function HomeBanner() {
         />
         <Image
           alt="hero"
-          src="/bg-hero2.webp"
+          src="/Fundo2.jpg"
           fill
           className={`${
             image === 2 ? "opacity-100" : "opacity-0"
@@ -35,7 +35,7 @@ function HomeBanner() {
         />
         <Image
           alt="hero"
-          src="/bg-hero3.webp"
+          src="/Fundo3.jpg"
           fill
           className={`${
             image === 3 ? "opacity-100" : "opacity-0"
@@ -43,7 +43,7 @@ function HomeBanner() {
         />
         <Image
           alt="hero"
-          src="/bg-hero4.webp"
+          src="/England.jpg"
           fill
           className={`${
             image === 4 ? "opacity-100" : "opacity-0"
@@ -51,7 +51,7 @@ function HomeBanner() {
         />
         <Image
           alt="hero"
-          src="/bg-hero5.webp"
+          src="/LosAngeles.jpg"
           fill
           className={`${
             image === 5 ? "opacity-100" : "opacity-0"
@@ -59,19 +59,44 @@ function HomeBanner() {
         />
         <Image
           alt="hero"
-          src="/bg-hero6.webp"
+          src="/NewYork.jpg"
           fill
           className={`${
             image === 6 ? "opacity-100" : "opacity-0"
           } transition-all duration-1000`}
         />
+        <Image
+          alt="hero"
+          src="/Paris.jpg"
+          fill
+          className={`${
+            image === 7 ? "opacity-100" : "opacity-0"
+          } transition-all duration-1000`}
+        />
+        <Image
+          alt="hero"
+          src="/Portugal.jpg"
+          fill
+          className={`${
+            image === 8 ? "opacity-100" : "opacity-0"
+          } transition-all duration-1000`}
+        />
+        <Image
+          alt="hero"
+          src="/RomeItaly.jpg"
+          fill
+          className={`${
+            image === 9 ? "opacity-100" : "opacity-0"
+          } transition-all duration-1000`}
+        />
+        
       </div>
-      <div className="z-10 relative w-[650px] flex justify-center flex-col h-full gap-5 ml-20">
+      <div className="z-10 w-[1440px] flex justify-center flex-col h-full gap-5 ml-40">
         <h1 className="text-white text-5xl leading-snug">
           Find the perfect&nbsp;
-          <i>freelance</i>
+          <i>Plan</i>
           <br />
-          services for your business
+          for your next trip
         </h1>
         <div className="flex align-middle">
           <div className="relative">
@@ -79,7 +104,7 @@ function HomeBanner() {
             <input
               type="text"
               className="h-14 w-[450px] pl-10 rounded-md rounded-r-none"
-              placeholder={`Try "building mobile app"`}
+              placeholder={`Try "Tokyo"`}
               value={searchData}
               onChange={(e) => setSearchData(e.target.value)}
             />
@@ -98,25 +123,25 @@ function HomeBanner() {
               className="text-sm py-1 px-3 border rounded-full hover:bg-white hover:text-black transition-all duration-300	cursor-pointer"
               onClick={() => router.push("/search?q=website design")}
             >
-              Website Design
+              Japan
             </li>
             <li
               className="text-sm py-1 px-3 border rounded-full hover:bg-white hover:text-black transition-all duration-300	cursor-pointer"
               onClick={() => router.push("/search?q=wordpress")}
             >
-              Wordpress
+              USA
             </li>
             <li
               className="text-sm py-1 px-3 border rounded-full hover:bg-white hover:text-black transition-all duration-300	cursor-pointer"
               onClick={() => router.push("/search?q=logo design")}
             >
-              Logo Design
+              Portugal
             </li>
             <li
               className="text-sm py-1 px-3 border rounded-full hover:bg-white hover:text-black transition-all duration-300	cursor-pointer"
               onClick={() => router.push("/search?q=ai services")}
             >
-              AI Services
+              Italy
             </li>
           </ul>
         </div>
